@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500;800&family=Mukta:wght@300;500&family=Rubik:wght@400;500&family=Ubuntu:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+    <title>Accordion Creation</title>
+    <style>
+        *{
+            font-family: 'Gabarito', sans-serif;
+            font-family: 'Mukta', sans-serif;
+            font-family: 'Rubik', sans-serif;
+            font-family: 'Ubuntu', sans-serif;
+        }
+        .container{
+            padding: 50px;
+        }
+        .sections{
+            padding: 20px;
+        }
+        .section{
+            border: 1px solid red;
+            padding: 20px;
+            cursor: pointer;
+            border-radius: 50px;
+            margin: 10px;
+        }
+        .show{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sections">
+            <div class="section" id="section-1">
+                <div class="show">
+                    <h4>Section-1</h4>
+                    <i class="fa-solid fa-angle-up" id="sec-1-sym"></i>
+                </div>
+                <div class="hide" id="content-1">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui quis inventore architecto est laboriosam dignissimos consequatur nemo molestiae earum velit ipsa soluta ex omnis, quasi nam temporibus, magni nulla ad facere eius tenetur nobis sint! Atque libero earum modi blanditiis eum dignissimos error officia quo! Minus, repellat ipsum a nam, sit voluptates quo reprehenderit, quas hic ipsa vitae! Magnam tempore voluptates, quasi molestias obcaecati cumque id placeat nam harum dolore eveniet repellat est ipsam atque nesciunt ducimus dignissimos, natus vero temporibus exercitationem sequi maiores accusamus consequatur debitis. Maiores aliquam perferendis omnis tempora consequatur, exercitationem dolorum eveniet, dolore, enim voluptatibus id.</p>
+                </div>
+            </div>
+            <div class="section" id="section-2">
+                <div class="show">
+                    <h4>Section-2</h4>
+                    <i class="fa-solid fa-angle-up" id="sec-2-sym"></i>
+                </div>
+                <div class="hide" id="content-2">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam error labore itaque sed, assumenda maiores repellendus ipsam laborum, odio libero ipsa ea id numquam tempore repudiandae rerum vitae at hic aliquid enim placeat totam architecto cum voluptatum? Ullam, consectetur. Pariatur voluptatum modi quas error blanditiis repellendus unde sint rerum magnam esse deserunt, voluptate vitae ab atque in at, nisi officia iusto perspiciatis placeat sunt. Beatae maxime nihil itaque in nam saepe magnam quod ea reprehenderit ab, culpa, minima, ex labore cumque assumenda? Vel provident repudiandae a modi? Cumque blanditiis distinctio voluptates sunt debitis, quasi aliquid, atque provident aut unde est!</p>
+                </div>
+            </div>
+            <div class="section" id="section-3">
+                <div class="show">
+                    <h4>Section-3</h4>
+                    <i class="fa-solid fa-angle-up" id="sec-3-sym"></i>
+                </div>
+                <div class="hide" id="content-3">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, soluta facilis laborum laudantium illo corrupti quibusdam reiciendis tempore eius provident error itaque ipsa dolor possimus nisi veritatis harum odio vel voluptatum assumenda! Unde iste error molestiae maxime quaerat neque fugiat, perspiciatis veniam in rem aperiam deserunt blanditiis. Quia reiciendis praesentium ullam sunt voluptatum quod impedit similique perspiciatis quas at. Totam dolores quaerat, mollitia iure temporibus earum eveniet, quae ullam, consectetur ipsam nam perspiciatis quo voluptatem blanditiis deleniti accusamus. Quidem odio eos quaerat nemo, dolore ab, fugit alias ea veniam ducimus suscipit quis in ullam delectus. Magnam ab tenetur quisquam facilis!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+        btnSec1 = document.getElementById('section-1');
+        btnSec2 = document.getElementById('section-2');
+        btnSec3 = document.getElementById('section-3');
+        con1 = document.getElementById('content-1')
+        con2 = document.getElementById('content-2')
+        con3 = document.getElementById('content-3')
+        btnSec1.addEventListener("click", ()=>{
+            if(con1.style.display == 'block'){
+                $('#content-1').slideUp();
+                $('#sec-1-sym').removeClass('fa-angle-down');
+                $('#sec-1-sym').addClass('fa-angle-up');
+                // con1.style.display = "none";
+            }else{
+                // con1.style.display = "block";
+                $('#content-1').slideDown();
+                $('#sec-1-sym').removeClass('fa-angle-up');
+                $('#sec-1-sym').addClass('fa-angle-down');
+            }
+        });
+        btnSec2.addEventListener("click", ()=>{
+            if(con2.style.display == 'block'){
+                $('#content-2').slideUp();
+                $('#sec-2-sym').removeClass('fa-angle-down');
+                $('#sec-2-sym').addClass('fa-angle-up');
+                // con1.style.display = "none";
+            }else{
+                // con1.style.display = "block";
+                $('#content-2').slideDown();
+                $('#sec-2-sym').removeClass('fa-angle-up');
+                $('#sec-2-sym').addClass('fa-angle-down');
+            }
+        });
+        btnSec3.addEventListener("click", ()=>{
+            if(con3.style.display == 'block'){
+                $('#content-3').slideUp();
+                $('#sec-3-sym').removeClass('fa-angle-down');
+                $('#sec-3-sym').addClass('fa-angle-up');
+                // con1.style.display = "none";
+            }else{
+                // con1.style.display = "block";
+                $('#content-3').slideDown();
+                $('#sec-3-sym').removeClass('fa-angle-up');
+                $('#sec-3-sym').addClass('fa-angle-down');
+            }
+        });
+    </script>
+</body>
+</html>
