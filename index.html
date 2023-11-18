@@ -87,8 +87,14 @@
             }else{
                 // con1.style.display = "block";
                 $('#content-1').slideDown();
+                $('#content-2').slideUp();
+                $('#content-3').slideUp();
                 $('#sec-1-sym').removeClass('fa-angle-up');
                 $('#sec-1-sym').addClass('fa-angle-down');
+                $('#sec-2-sym').removeClass('fa-angle-down');
+                $('#sec-2-sym').addClass('fa-angle-up');
+                $('#sec-3-sym').removeClass('fa-angle-down');
+                $('#sec-3-sym').addClass('fa-angle-up');
             }
         });
         btnSec2.addEventListener("click", ()=>{
@@ -100,8 +106,14 @@
             }else{
                 // con1.style.display = "block";
                 $('#content-2').slideDown();
+                $('#content-1').slideUp();
+                $('#content-3').slideUp();
                 $('#sec-2-sym').removeClass('fa-angle-up');
                 $('#sec-2-sym').addClass('fa-angle-down');
+                $('#sec-1-sym').removeClass('fa-angle-down');
+                $('#sec-1-sym').addClass('fa-angle-up');
+                $('#sec-3-sym').removeClass('fa-angle-down');
+                $('#sec-3-sym').addClass('fa-angle-up');
             }
         });
         btnSec3.addEventListener("click", ()=>{
@@ -113,8 +125,14 @@
             }else{
                 // con1.style.display = "block";
                 $('#content-3').slideDown();
+                $('#content-1').slideUp();
+                $('#content-2').slideUp();
                 $('#sec-3-sym').removeClass('fa-angle-up');
                 $('#sec-3-sym').addClass('fa-angle-down');
+                $('#sec-1-sym').removeClass('fa-angle-down');
+                $('#sec-1-sym').addClass('fa-angle-up');
+                $('#sec-2-sym').removeClass('fa-angle-down');
+                $('#sec-2-sym').addClass('fa-angle-up');
             }
         });
     </script>
